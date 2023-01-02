@@ -1,2 +1,2 @@
 # Projekt
-Projekt do przemyślenia
+Niniejszy folder zawierać będzie pliki skłądające się na moje portfolio.
