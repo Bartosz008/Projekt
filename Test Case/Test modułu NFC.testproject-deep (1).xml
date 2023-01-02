@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]> 
+</details><testsuite name="Łączność NFC i wymiana danych" >
+<node_order><![CDATA[0]]></node_order>
+<details><![CDATA[]]> 
+</details>
+<testcase internalid="23" name="Przypisanie urządzenia">
+	<node_order><![CDATA[100]]></node_order>
+	<externalid><![CDATA[1]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Otwarcie Webpanelu i prawidłowe wprowadzenie danych logowania</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Zalogowanie do pulpitu aplikacji</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Kliknięcie moduł Pracownicy</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Otwarcie okna z listą pracownik&oacute;w</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Kliknięcie w wybranego pracownika z listy</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Otwarcie karty pracownika - karta pracownika zawiera dane pracownika oraz tabelę wypożyczanych urządzeń jak r&oacute;wnież odpowiednimi filtramio do wyszukiwania</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Uruchomienie aplikacji Kontroli</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Włączenie modułu NFC spiętego z webpanelem</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Przykładam pestkę (na potrzeby testu został stworzony wirttualny pracownik) do modułu NFC</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Moduł sczytuje pestkę - komunikat na aplikacji kontroli - pojawienie się danych użytkownika przypisanych do pestki</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	Przyłożenie karty przypisanej do urządzenia wirtualnego 1 do czytnika NFC</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytanie karty i pojawienie się urzadzenia przy użytkowniku w webpanelu do zatwierdzenia</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>
+	Wybranie opcji Zapisz</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytane urządzenie przypisuje się do pracownika</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[9]]></step_number>
+	<actions><![CDATA[<p>
+	Przejście do okna Webpanelu - odświeżenie okna</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Pojawia się przypisane urzadzenie przypisane do pracownika</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[10]]></step_number>
+	<actions><![CDATA[<p>
+	Przypisanie kolejnego urządzenia do tego samego pracownika:</p>
+<p>
+	Przykładam pestkę do modułu NFC&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	- Moduł sczytuje pestkę&nbsp;</p>
+<p>
+	- Komunikat na aplikacji Kontroli</p>
+<p>
+	- Pojawienie się danych przypisanych do pestki</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[11]]></step_number>
+	<actions><![CDATA[<p>
+	Przyłożenie karty przypisanej do wirtualnego urządzenia 2 do czytnika NFC</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytanie karty i pojawienie się urządzenia przy użytkowniku do zatwierdzenia</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[12]]></step_number>
+	<actions><![CDATA[<p>
+	Wybranie opcji &quot;Zapisz&quot;&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Kolejne sczytane urządzenie przypisuje się do pracownika</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[13]]></step_number>
+	<actions><![CDATA[<p>
+	Przejście do widoku okna webpanelu i odświeżenie strony</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Pojawia się widok obu przypisanych urządzeń do pracownika ze statusami &quot;W użyciu&quot;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[14]]></step_number>
+	<actions><![CDATA[<p>
+	Ponowne przyjęcie środka trwałego wczesniej oddanego ze zmianą na status Uszkodzony</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Komunikat: Urządzenie uszkodzone - brak możliwości pobrania</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="25" name="Zwrot urządzenia">
+	<node_order><![CDATA[101]]></node_order>
+	<externalid><![CDATA[2]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Zwrot przypisanych wcześniej narzędzi do pracownika z pozycji webpanelu</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Komunikat z potwierdzeniem zwrotu urządezenia, możliwość dodania komentarza oraz zmianę statusu:</p>
+<p>
+	Wolny - Używany - Uszkodzony</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Oddanie urządzenia z Webpanelu, zmieniając status na Uszkodzony</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Potwierdzenie zwrotu środka trwałego</p>
+<p>
+	Możliwość zmiany statusu: Wolny - Używany - Uszkodzony</p>
+<p>
+	Środek trwały odpisuje sie od użytkownika</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Zwrot wcześniej przypisanego urzadzenia za pomocą czytnika i kart NFC</p>
+<p>
+	Przyłożenie pestki pracownika do modułu NFC</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytanie pestki, wyświetlenie danych pracownika z listą wypożyczonych urządzeń</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Przyłożenie Karty urządzenia 1 przypisanej do pracownika</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytanie karty i pojawienie się okna z zatwierdzeniem zwrotu urządzenia</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>
+	Kliknięcie Zapis</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Urządzenie uzyskuje status Wolne i odpina się zod użytkownika</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[6]]></step_number>
+	<actions><![CDATA[<p>
+	Zwrot wcześniej przypisanego urządzenia za pomocą czytnika i kart NFC</p>
+<p>
+	Przyłożenie pestki pracownika do modułu NFC</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytanie pestki, wyświetlenie danych pracownika z listą wypożyczonych urządzeń</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[7]]></step_number>
+	<actions><![CDATA[<p>
+	Przyłożenie karty urządzenia 2 przypisanej do pracownika</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Sczytanie karty i pojawienie się okna z zatwierdzeniem zwrotu urządzenia</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[8]]></step_number>
+	<actions><![CDATA[<p>
+	Kliknięcie Zapis</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Urządzenie uzyskuje status Wolne i odpina się od użytkownika</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="27" name="Zmiana statusu">
+	<node_order><![CDATA[102]]></node_order>
+	<externalid><![CDATA[3]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[]]></summary>
+	<preconditions><![CDATA[]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>
+	Przejście w Webpanelu do modułu Środki trwałe</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Otwarcie okna z wszystkimi środkami trwałymi</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>
+	Kliknięcie w urządzenie ze statusem Uszkodzony</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Otwarcie Karty środka trwałego</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>
+	Przejście do edycji danych środka trwałego</p>
+<p>
+	(w tym Statusu urządzenia)</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Otawrcie okna edycji środka trwałego&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>
+	Zmiana z &quot;palca&quot; Statusu urządzenia/środka trwałego z Uszkodzonego na Wolne i kliknięcie w przycisk Zapis</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>
+	Widoczna zmiana statusu</p>
+<p>
+	Automatyczny powr&oacute;t do listy urządzeń z komunikatem o zapisaniu zmian urządzenia</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+</testsuite></testsuite>
